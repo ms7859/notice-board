@@ -16,6 +16,3 @@ firebase.initializeApp(firebaseConfig);
 export const firebaseInstance = firebase;
 export const authService = firebase.auth();
 export const dbService = firebase.firestore();
-
-// createUserWithEmailAndPassword는 사용하려면 firebase.auth() 안에 존재한다. 때문에 이를 사용하려면 firebase.auth().createUserWithEamilAndPassword();와 같이 호출해야 한다.
-// 하지만 firebase.auth()를 authService로 export하면 이를 import하는 파일에서는 authService.createUserWithEmailAndPassword();와 같이 호출할 수 있는 듯?
